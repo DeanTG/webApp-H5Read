@@ -1,12 +1,19 @@
 body {
   background-color: #e9dfc7;
 }
+.js_show {
+  display: block;
+}
+.js_hide {
+  display: none;
+}
 .page {
   width: 100%;
   height: 100%;
   text-align: justify;
 }
 .topNav {
+  display: none;
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -78,6 +85,7 @@ body {
   border-right: solid 1px #056382;
 }
 .bottomNav {
+  display: none;
   width: 100%;
   height: 60px;
   background: rgba(0, 0, 0, 0.8);
@@ -129,6 +137,19 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+.bottomNav nav a:nth-of-type(2).current:before {
+  display: block;
+  content: '';
+  width: 38px;
+  height: 26px;
+  background: url('../images/font_active.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 .bottomNav nav a:nth-of-type(3):before {
   display: block;
   content: '';
@@ -142,7 +163,21 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+.bottomNav nav a:nth-of-type(3).day:before {
+  display: block;
+  content: '';
+  width: 28.5px;
+  height: 28.5px;
+  background: url('../images/day.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 .control {
+  display: none;
   width: 100%;
   height: 135px;
   border-bottom: solid 1px #ddd;
@@ -202,5 +237,15 @@ body {
 }
 .control li .color-btn:nth-of-type(5) {
   background-color: #273644;
+}
+.action-area-media {
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 101;
 }
 /*# sourceMappingURL=style.css.map */
